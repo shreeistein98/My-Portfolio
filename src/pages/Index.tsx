@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Hero } from "@/components/Hero";
 import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
-import { Blog } from "@/components/Blog";
+import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -16,9 +16,9 @@ const Index = () => {
   return (
     <div className="animate-fade-in">
       <Hero />
+      <Education />
       <Experience />
       <Projects />
-      <Blog />
       <Contact />
       <Footer />
     </div>

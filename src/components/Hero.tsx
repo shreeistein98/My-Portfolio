@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-16">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 pb-16">
       <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="flex flex-col space-y-6 animate-fade-in">
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
             <img
               src="/lovable-uploads/2628dcaf-b870-4733-8ab8-67b73fcabdbc.png"
               alt="Shreyas Gaikwad"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center scale-110 translate-y-2"
             />
           </div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
