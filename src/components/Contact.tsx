@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Phone, Send, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Linkedin, Github, Code } from "lucide-react";
 import { useState } from "react";
 
 export const Contact: React.FC = () => {
@@ -103,13 +103,22 @@ export const Contact: React.FC = () => {
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/shreeistein98" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                     aria-label="GitHub Profile"
                   >
                     <Github className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="https://leetcode.com/u/shreeistein/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                    aria-label="LeetCode Profile"
+                  >
+                    <Code className="h-5 w-5" />
                   </a>
                 </div>
               </div>

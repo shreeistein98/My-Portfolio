@@ -9,8 +9,6 @@ interface ProjectCardProps {
   solution: string;
   technologies: string[];
   image?: string;
-  github?: string;
-  demo?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -20,8 +18,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   solution,
   technologies,
   image,
-  github,
-  demo,
 }) => {
   return (
     <div className="group rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 bg-card h-full flex flex-col">
@@ -65,30 +61,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </span>
             ))}
           </div>
-          <div className="flex gap-3 mt-2">
-            {github && (
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-secondary transition-colors"
-                aria-label="View source code on GitHub"
-              >
-                <Github size={18} />
-              </a>
-            )}
-            {demo && (
-              <a
-                href={demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-secondary transition-colors"
-                aria-label="View live demo"
-              >
-                <ExternalLink size={18} />
-              </a>
-            )}
-          </div>
         </div>
       </div>
     </div>
@@ -114,7 +86,6 @@ export const Projects: React.FC = () => {
             solution="Created a Python-based plugin using Flask and NLP libraries that extracts keywords from text and converts them into catchy jingles in under 5 seconds, enhancing memory retention."
             technologies={["Python", "Flask", "NLP", "AI"]}
             image="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-            github="https://github.com"
           />
           <ProjectCard
             title="Anomaly Motion Detection"
@@ -123,7 +94,6 @@ export const Projects: React.FC = () => {
             solution="Delivered a predictive model capable of identifying anomalous movements in real-time video surveillance, significantly enhancing security monitoring capabilities."
             technologies={["CNN", "Computer Vision", "C3D Model"]}
             image="https://images.unsplash.com/photo-1518770660439-4636190af475"
-            github="https://github.com"
           />
           <ProjectCard
             title="Mean Variance Portfolio Optimization"
@@ -132,7 +102,6 @@ export const Projects: React.FC = () => {
             solution="Created an algorithm that identifies high-return stocks for a given risk level, yielding 12% higher returns than the SP500TR benchmark."
             technologies={["PostgreSQL", "R", "ETL", "Financial Analysis"]}
             image="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3"
-            github="https://github.com"
           />
         </div>
 
