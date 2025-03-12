@@ -76,10 +76,10 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/blog"
+                  to="/education"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Blog
+                  Education
                 </Link>
               </li>
               <li>
