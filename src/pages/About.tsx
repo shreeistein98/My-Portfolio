@@ -67,11 +67,11 @@ const About = () => {
             </div>
 
             <div className="order-1 md:order-2 flex justify-center">
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 overflow-hidden rounded-xl border-4 border-white dark:border-gray-800 shadow-xl">
+              <div className="relative w-64 h-80 sm:w-80 sm:h-96 overflow-hidden rounded-xl border-4 border-white dark:border-gray-800 shadow-xl">
                 <img
                   src="/lovable-uploads/2628dcaf-b870-4733-8ab8-67b73fcabdbc.png"
                   alt="Shreyas Gaikwad"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
