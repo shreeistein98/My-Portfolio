@@ -39,13 +39,13 @@ export const Hero: React.FC = () => {
           </div>
         </div>
         
-        {/* Image - Adjusted to be larger and square with better positioning */}
+        {/* Image - Adjusted positioning to ensure the whole image is visible */}
         <div className="relative flex justify-center items-center animate-fade-in-right">
           <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-xl">
             <img
               src="/lovable-uploads/2628dcaf-b870-4733-8ab8-67b73fcabdbc.png"
               alt="Shreyas Gaikwad"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-contain"
             />
           </div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
