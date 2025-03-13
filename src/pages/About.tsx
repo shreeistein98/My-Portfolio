@@ -9,6 +9,19 @@ const About = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Function to handle resume download
+  const handleResumeDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    // Create a link to the PDF file and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Path to your PDF file in the public folder
+    link.download = 'shreyas-gaikwad-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="animate-fade-in pt-24">
       {/* Hero Section */}
@@ -44,8 +57,8 @@ const About = () => {
               </div>
 
               <a
-                href="/resume.pdf"
-                download
+                href="#"
+                onClick={handleResumeDownload}
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg inline-flex items-center gap-2"
               >
                 Download Resume
