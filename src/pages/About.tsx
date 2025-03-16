@@ -1,7 +1,6 @@
-
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
-import { CheckCircle, Download, GraduationCap, Award, Chess } from "lucide-react";
+import { CheckCircle, Download, GraduationCap, Award, Trophy } from "lucide-react";
 
 const About = () => {
   // Scroll to top on page load
@@ -49,7 +48,7 @@ const About = () => {
               </p>
 
               <div className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 border border-border mb-6">
-                <Chess className="h-6 w-6 text-primary flex-shrink-0" />
+                <Trophy className="h-6 w-6 text-primary flex-shrink-0" />
                 <p className="text-sm font-medium">
                   <span className="font-semibold">Fun Fact:</span> I am in the top 0.3% of chess players globally.
                 </p>
