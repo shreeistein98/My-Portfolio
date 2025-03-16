@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
-import { CheckCircle, Download, GraduationCap, Award } from "lucide-react";
+import { CheckCircle, Download, GraduationCap, Award, Chess } from "lucide-react";
 
 const About = () => {
   // Scroll to top on page load
@@ -47,6 +47,13 @@ const About = () => {
                 I enjoy working with technologies like Python, SQL, AWS, GCP, and various BI tools to transform raw data 
                 into meaningful insights.
               </p>
+
+              <div className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 border border-border mb-6">
+                <Chess className="h-6 w-6 text-primary flex-shrink-0" />
+                <p className="text-sm font-medium">
+                  <span className="font-semibold">Fun Fact:</span> I am in the top 0.3% of chess players globally.
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground">Data Engineering</span>
