@@ -108,7 +108,7 @@ export const Experience: React.FC = () => {
             descriptions={[
               "Drafted 40+ UAT test cases to validate ETL workflows and database consistency, uncovering 15+ defects pre-deployment.",
               "Integrated speech-to-text functionality using IBM Watson, increasing transcription accuracy from 80% to 95% over previous tools, reducing manual note-taking for students, and saving approximately 5 hours per week.",
-              "Implemented real-time question prompts in Zoom sessions using Azure Cognitive Services, based on teachers' live lectures, increasing student response rates by 40% and securing first place in the Asia-Pacific region at the "Call for Code" Hackathon."
+              "Implemented real-time question prompts in Zoom sessions using Azure Cognitive Services, based on teachers' live lectures, increasing student response rates by 40% and securing first place in the Asia-Pacific region at the \"Call for Code\" Hackathon."
             ]}
           />
         </div>
