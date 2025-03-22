@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { CheckCircle, Download, GraduationCap, Award, Trophy } from "lucide-react";
@@ -38,22 +37,18 @@ const About = () => {
             <div className="order-2 md:order-1">
               <h2 className="text-2xl font-semibold mb-4">Shreyas Gaikwad</h2>
               <p className="text-muted-foreground mb-4">
+                Enthusiastic and Persistent—these two words define me! I am passionate about problem-solving, 
+                whether technical or analytical, and always strive to find effective solutions.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                The core value of 'Innovation' resonates with me the most because I am driven to develop creative and 
+                efficient approaches to tackling data challenges. With my solid academic background and hands-on experience.
+              </p>
+              <p className="text-muted-foreground mb-4">
                 I'm a data engineer with over 3 years of experience specializing in ETL pipeline development, 
                 data visualization, and cloud technologies. Currently pursuing a Master's degree in Information Systems 
                 with a focus on Business Analytics at California State University, Fullerton.
               </p>
-              
-              {/* Added personal statement */}
-              <div className="p-5 rounded-lg bg-primary/5 border border-primary/20 mb-6">
-                <p className="italic mb-3">
-                  "Enthusiastic and Persistent—these two words define me! I am passionate about problem-solving, 
-                  whether technical or analytical, and always strive to find effective solutions."
-                </p>
-                <p className="italic">
-                  "The core value of 'Innovation' resonates with me the most because I am driven to develop creative and 
-                  efficient approaches to tackling data challenges. With my solid academic background and hands-on experience."
-                </p>
-              </div>
               
               <p className="text-muted-foreground mb-6">
                 My expertise lies in designing scalable data solutions that help businesses make data-driven decisions. 
