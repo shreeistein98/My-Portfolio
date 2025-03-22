@@ -46,7 +46,7 @@ const About = () => {
                 efficient approaches to tackling data challenges. With my solid academic background and hands-on experience.
               </p>
               <p className="text-muted-foreground mb-4">
-                I'm a data engineer with over 3 years of experience specializing in ETL pipeline development, 
+                I'm a data engineer with over 4 years of experience specializing in ETL pipeline development, 
                 data visualization, and cloud technologies. Currently pursuing a Master's degree in Information Systems 
                 with a focus on Business Analytics at California State University, Fullerton.
               </p>
