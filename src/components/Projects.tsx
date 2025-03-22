@@ -83,7 +83,7 @@ export const Projects: React.FC = () => {
             title="Memory Mind"
             problem="ADHD individuals often struggle to retain information from texts, leading to challenges in learning and retention."
             approach="Leveraged NLP techniques to extract key concepts from text and developed an algorithm to convert these into memorable, engaging jingles."
-            solution="Created a Python-based plugin using Flask and NLP libraries that extracts keywords from text and converts them into catchy jingles in under 5 seconds, enhancing memory retention."
+            solution="Built a fun learning plugin using Python, Flask and NLP to extract keywords, create catchy jingles in under 5 seconds, winning HackSC 2024 at the University of Southern California."
             technologies={["Python", "Flask", "NLP", "AI"]}
             image="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
           />
@@ -91,7 +91,7 @@ export const Projects: React.FC = () => {
             title="Anomaly Motion Detection"
             problem="Traditional security systems lack the ability to detect unusual movement patterns in real-time video feeds, creating security vulnerabilities."
             approach="Implemented a 2-stream Convolutional Neural Network (CNN) architecture using a C3D model trained on over 1,900 videos of different movement patterns."
-            solution="Delivered a predictive model capable of identifying anomalous movements in real-time video surveillance, significantly enhancing security monitoring capabilities."
+            solution="Orchestrated a predictive model using a 2-stream CNN with a C3D model, analyzing 1,900+ input videos to enhance real-time security surveillance."
             technologies={["CNN", "Computer Vision", "C3D Model"]}
             image="https://images.unsplash.com/photo-1518770660439-4636190af475"
           />
@@ -99,7 +99,7 @@ export const Projects: React.FC = () => {
             title="Mean Variance Portfolio Optimization"
             problem="Investors struggle to identify optimal stock portfolios that balance risk and return, often resulting in suboptimal investment decisions."
             approach="Developed ETL processes using PostgreSQL and R to analyze historical stock performance data and implemented mathematical models to optimize portfolio allocation."
-            solution="Created an algorithm that identifies high-return stocks for a given risk level, yielding 12% higher returns than the SP500TR benchmark."
+            solution="Devised PostgreSQL and R scripts for ETL to identify high-return stocks based on risk levels, achieving a 12% higher return than SP500TR."
             technologies={["PostgreSQL", "R", "ETL", "Financial Analysis"]}
             image="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3"
           />

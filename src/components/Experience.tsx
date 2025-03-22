@@ -1,5 +1,5 @@
 
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Award } from "lucide-react";
 
 interface ExperienceItemProps {
   title: string;
@@ -7,6 +7,7 @@ interface ExperienceItemProps {
   location: string;
   period: string;
   descriptions: string[];
+  award?: string;
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
@@ -15,11 +16,20 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   location,
   period,
   descriptions,
+  award,
 }) => {
   return (
     <div className="p-6 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300">
       <div className="mb-4">
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <div className="flex items-center justify-between flex-wrap gap-2">
+          <h3 className="text-xl font-semibold">{title}</h3>
+          {award && (
+            <div className="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-md text-sm">
+              <Award size={14} />
+              <span>{award}</span>
+            </div>
+          )}
+        </div>
         <h4 className="text-lg text-primary font-medium mt-1">{company}</h4>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-2 text-sm text-muted-foreground">
           <div className="flex items-center gap-1">
@@ -61,9 +71,10 @@ export const Experience: React.FC = () => {
             location="Carson, California"
             period="May 2024 - Present"
             descriptions={[
-              "Developed Apache Spark-based ETL pipelines and custom DAG scripts in Apache Airflow to automate workflow orchestration, ensuring fault-tolerant execution of real estate data.",
-              "Created and updated 35 Data Extensions using SQL, Query Studio, Excel and built journeys in Salesforce Marketing Cloud.",
-              "Collaborated with stakeholders to identify challenges and automated 3 applications using FastAPI and Python, reducing manual work by 40%."
+              "Developed Apache Spark ETL pipelines and Airflow DAGs to integrate real estate records from multiple sources, added fault tolerance to prevent job failures and reduced data processing time by 65%, from 40 to 14 minutes.",
+              "Optimized 35+ SQL database tables by implementing indexing and materialized views, cutting query time from 50 to 20 seconds.",
+              "Created interactive Apache Superset dashboards to analyze maintenance and repair expenses over 9 years, identifying cost-saving opportunities and reducing unnecessary expenditures by $8,500 annually.",
+              "Collaborated with stakeholders to identify challenges and automated three applications using Python and FastAPI, reducing manual work from 60 minutes to 5 minutes and saving over 200 work hours per quarter."
             ]}
           />
           <ExperienceItem
@@ -72,10 +83,11 @@ export const Experience: React.FC = () => {
             location="Cyber Security - Network Orchestration and Response"
             period="July 2020 - August 2023"
             descriptions={[
-              "Designed 17+ dashboards in Tableau leveraging advance calculated fields for visualizing network traffic of monitored websites.",
-              "Automated JIRA workflows using AWS Lambda and DynamoDB, enabling real-time ticket updates, automatic assignment, and improved tracking, reducing backlog by 20%.",
-              "Enhanced 35+ SQL queries and implemented indexing and materialized views, reducing query execution time by 30%."
+              "Designed Tableau dashboards with calculated fields and time-series analysis, minimizing anomaly detection time from 2 hours to 10 minutes and helping prevent over 30 potential security threats.",
+              "Automated JIRA workflows using AWS Lambda and DynamoDB, enabling real-time ticket updates and status tracking, eliminating manual handling and freeing up 10+ hours per week to improve team productivity and issue resolution speed.",
+              "Enhanced SQL queries with partitioning and window functions, slashing log analysis time from 30 minutes to 2 minutes and accelerating threat detection across 50K+ security events."
             ]}
+            award="Top Talent Award"
           />
           <ExperienceItem
             title="Data Engineer"
@@ -83,9 +95,9 @@ export const Experience: React.FC = () => {
             location="COVID-19 Dashboard"
             period="July 2020 - August 2023"
             descriptions={[
-              "Applied Excel, Python libraries (pandas, numpy, scikit, statsmodels) to clean and process a 650,000-row COVID-19 dataset, reducing missing values by 30% and improving data reliability for analytics.",
-              "Engineered a scalable data pipeline using GCP Dataflow & Data Fusion, enabling seamless data migration into Cloud SQL and BigQuery, reducing data processing costs by 25%.",
-              "Constructed 9 interactive PowerBI dashboards, utilizing DAX calculations to track key KPIs such as infection rate trends, regional case distributions and recovery rates, using time-series analysis and correlation models with 80% accuracy."
+              "Applied Excel, Python libraries (Pandas, NumPy, Scikit, Statsmodels) to clean and process a 650,000-row COVID-19 dataset, improving data reliability for analytics and reducing missing values by 30% (from 195,000 to 136,500).",
+              "Engineered a scalable data pipeline using GCP Dataflow & Data Fusion, delivering seamless data migration into Cloud SQL and BigQuery, cutting data processing costs by approximately $1,100 per month.",
+              "Constructed 13 interactive Power BI dashboards, utilizing DAX calculations to track key KPIs, including infection rate trends, regional case distributions and recovery rates, leveraging time-series analysis and correlation models with 93% accuracy."
             ]}
           />
           <ExperienceItem
@@ -94,9 +106,9 @@ export const Experience: React.FC = () => {
             location="Teacher Assist"
             period="July 2020 - August 2023"
             descriptions={[
-              "Drafted 40+ UAT test cases to validate data pipeline integrity, ETL workflows and database consistency.",
-              "Performed automation and optimized Jenkins load through automated job cleanup; crafted a Bash script reducing cleanup duration from 40 minutes to 20 minutes.",
-              "Engineered speech-to-text functionality using libraries like IBM-watson, achieving an accuracy of 95%."
+              "Drafted 40+ UAT test cases to validate ETL workflows and database consistency, uncovering 15+ defects pre-deployment.",
+              "Integrated speech-to-text functionality using IBM Watson, increasing transcription accuracy from 80% to 95% over previous tools, reducing manual note-taking for students, and saving approximately 5 hours per week.",
+              "Implemented real-time question prompts in Zoom sessions using Azure Cognitive Services, based on teachers' live lectures, increasing student response rates by 40% and securing first place in the Asia-Pacific region at the "Call for Code" Hackathon."
             ]}
           />
         </div>

@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Award } from "lucide-react";
 
 interface WorkExperienceCardProps {
   title: string;
@@ -14,6 +14,7 @@ interface WorkExperienceCardProps {
     description: string;
     technologies: string[];
   }[];
+  award?: string;
 }
 
 const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
@@ -23,11 +24,20 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
   period,
   descriptions,
   projects,
+  award,
 }) => {
   return (
     <div className="p-6 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300 mb-8">
       <div className="mb-4">
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <div className="flex items-center justify-between flex-wrap gap-2">
+          <h3 className="text-xl font-semibold">{title}</h3>
+          {award && (
+            <div className="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-md text-sm">
+              <Award size={14} />
+              <span>{award}</span>
+            </div>
+          )}
+        </div>
         <h4 className="text-lg text-primary font-medium mt-1">{company}</h4>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-2 text-sm text-muted-foreground">
           <div className="flex items-center gap-1">
@@ -103,20 +113,21 @@ const WorkExperiencePage = () => {
               location="Carson, California"
               period="May 2024 - Present"
               descriptions={[
-                "Developed Apache Spark-based ETL pipelines and custom DAG scripts in Apache Airflow to automate workflow orchestration, ensuring fault-tolerant execution of real estate data.",
-                "Created and updated 35 Data Extensions using SQL, Query Studio, Excel and built journeys in Salesforce Marketing Cloud.",
-                "Collaborated with stakeholders to identify challenges and automated 3 applications using FastAPI and Python, reducing manual work by 40%."
+                "Developed Apache Spark ETL pipelines and Airflow DAGs to integrate real estate records from multiple sources, added fault tolerance to prevent job failures and reduced data processing time by 65%, from 40 to 14 minutes.",
+                "Optimized 35+ SQL database tables by implementing indexing and materialized views, cutting query time from 50 to 20 seconds.",
+                "Created interactive Apache Superset dashboards to analyze maintenance and repair expenses over 9 years, identifying cost-saving opportunities and reducing unnecessary expenditures by $8,500 annually.",
+                "Collaborated with stakeholders to identify challenges and automated three applications using Python and FastAPI, reducing manual work from 60 minutes to 5 minutes and saving over 200 work hours per quarter."
               ]}
               projects={[
                 {
-                  name: "Salesforce Marketing Cloud Integration",
-                  description: "Integrated Salesforce Marketing Cloud with existing data pipelines to automate customer journeys and marketing campaigns.",
-                  technologies: ["Salesforce", "SQL", "Query Studio", "Excel"]
+                  name: "Real Estate Data Integration",
+                  description: "Built fault-tolerant ETL pipelines that reduced processing time by 65% and integrated data from multiple sources.",
+                  technologies: ["Apache Spark", "Airflow", "ETL", "Python"]
                 },
                 {
-                  name: "ETL Pipeline Automation",
-                  description: "Developed and optimized ETL pipelines using Apache Spark and Airflow for real estate data processing.",
-                  technologies: ["Apache Spark", "Airflow", "Python", "ETL"]
+                  name: "Expense Analysis Dashboard",
+                  description: "Created interactive dashboards that identified $8,500 in annual cost-saving opportunities across maintenance and repair expenses.",
+                  technologies: ["Apache Superset", "SQL", "Data Visualization"]
                 }
               ]}
             />
@@ -127,22 +138,23 @@ const WorkExperiencePage = () => {
               location="Cyber Security - Network Orchestration and Response"
               period="July 2020 - August 2023"
               descriptions={[
-                "Designed 17+ dashboards in Tableau leveraging advance calculated fields for visualizing network traffic of monitored websites.",
-                "Automated JIRA workflows using AWS Lambda and DynamoDB, enabling real-time ticket updates, automatic assignment, and improved tracking, reducing backlog by 20%.",
-                "Enhanced 35+ SQL queries and implemented indexing and materialized views, reducing query execution time by 30%."
+                "Designed Tableau dashboards with calculated fields and time-series analysis, minimizing anomaly detection time from 2 hours to 10 minutes and helping prevent over 30 potential security threats.",
+                "Automated JIRA workflows using AWS Lambda and DynamoDB, enabling real-time ticket updates and status tracking, eliminating manual handling and freeing up 10+ hours per week to improve team productivity and issue resolution speed.",
+                "Enhanced SQL queries with partitioning and window functions, slashing log analysis time from 30 minutes to 2 minutes and accelerating threat detection across 50K+ security events."
               ]}
               projects={[
                 {
-                  name: "Network Traffic Visualization",
-                  description: "Created comprehensive dashboards for real-time analysis of traffic patterns and security incidents, enabling proactive threat detection.",
-                  technologies: ["Tableau", "SQL", "Network Analysis", "Data Visualization"]
+                  name: "Security Threat Detection",
+                  description: "Implemented dashboards that reduced anomaly detection time from 2 hours to 10 minutes, preventing over 30 potential security threats.",
+                  technologies: ["Tableau", "Time-series Analysis", "SQL"]
                 },
                 {
                   name: "Automated JIRA Workflow",
-                  description: "Implemented automated assignment and tracking system that reduced backlog by 20% and significantly improved response times.",
-                  technologies: ["AWS Lambda", "DynamoDB", "JIRA API", "Python"]
+                  description: "Built serverless solution that eliminated manual ticket handling and freed up 10+ hours per week for the team.",
+                  technologies: ["AWS Lambda", "DynamoDB", "JIRA API"]
                 }
               ]}
+              award="Top Talent Award"
             />
             
             <WorkExperienceCard
@@ -151,20 +163,20 @@ const WorkExperiencePage = () => {
               location="COVID-19 Dashboard"
               period="July 2020 - August 2023"
               descriptions={[
-                "Applied Excel, Python libraries (pandas, numpy, scikit, statsmodels) to clean and process a 650,000-row COVID-19 dataset, reducing missing values by 30% and improving data reliability for analytics.",
-                "Engineered a scalable data pipeline using GCP Dataflow & Data Fusion, enabling seamless data migration into Cloud SQL and BigQuery, reducing data processing costs by 25%.",
-                "Constructed 9 interactive PowerBI dashboards, utilizing DAX calculations to track key KPIs such as infection rate trends, regional case distributions and recovery rates, using time-series analysis and correlation models with 80% accuracy."
+                "Applied Excel, Python libraries (Pandas, NumPy, Scikit, Statsmodels) to clean and process a 650,000-row COVID-19 dataset, improving data reliability for analytics and reducing missing values by 30% (from 195,000 to 136,500).",
+                "Engineered a scalable data pipeline using GCP Dataflow & Data Fusion, delivering seamless data migration into Cloud SQL and BigQuery, cutting data processing costs by approximately $1,100 per month.",
+                "Constructed 13 interactive Power BI dashboards, utilizing DAX calculations to track key KPIs, including infection rate trends, regional case distributions and recovery rates, leveraging time-series analysis and correlation models with 93% accuracy."
               ]}
               projects={[
                 {
-                  name: "COVID-19 Dashboard",
-                  description: "Developed interactive dashboards tracking infection rates, case distributions, and recovery rates, enabling data-driven health policy decisions.",
-                  technologies: ["PowerBI", "Python", "DAX", "Time-series Analysis"]
+                  name: "COVID-19 Data Analysis",
+                  description: "Processed and cleaned a 650,000-row dataset, reducing missing values by 30% and improving data reliability for analytics.",
+                  technologies: ["Python", "Pandas", "NumPy", "Scikit-learn"]
                 },
                 {
                   name: "GCP Data Pipeline",
-                  description: "Built scalable data pipelines to process and analyze COVID-19 data, reducing costs by 25% while improving data reliability.",
-                  technologies: ["GCP", "Dataflow", "Data Fusion", "Cloud SQL", "BigQuery"]
+                  description: "Built scalable pipeline that reduced processing costs by $1,100 per month while maintaining data integrity.",
+                  technologies: ["GCP", "Dataflow", "Data Fusion", "BigQuery"]
                 }
               ]}
             />
@@ -175,20 +187,20 @@ const WorkExperiencePage = () => {
               location="Teacher Assist"
               period="July 2020 - August 2023"
               descriptions={[
-                "Drafted 40+ UAT test cases to validate data pipeline integrity, ETL workflows and database consistency.",
-                "Performed automation and optimized Jenkins load through automated job cleanup; crafted a Bash script reducing cleanup duration from 40 minutes to 20 minutes.",
-                "Engineered speech-to-text functionality using libraries like IBM-watson, achieving an accuracy of 95%."
+                "Drafted 40+ UAT test cases to validate ETL workflows and database consistency, uncovering 15+ defects pre-deployment.",
+                "Integrated speech-to-text functionality using IBM Watson, increasing transcription accuracy from 80% to 95% over previous tools, reducing manual note-taking for students, and saving approximately 5 hours per week.",
+                "Implemented real-time question prompts in Zoom sessions using Azure Cognitive Services, based on teachers' live lectures, increasing student response rates by 40% and securing first place in the Asia-Pacific region at the "Call for Code" Hackathon."
               ]}
               projects={[
                 {
-                  name: "Jenkins Automation",
-                  description: "Optimized Jenkins load through automated job cleanup, reducing maintenance time by 50%.",
-                  technologies: ["Jenkins", "Bash", "Automation"]
+                  name: "Speech-to-Text Integration",
+                  description: "Increased transcription accuracy from 80% to 95%, saving students approximately 5 hours per week on note-taking.",
+                  technologies: ["IBM Watson", "Speech Recognition", "API Integration"]
                 },
                 {
-                  name: "Speech-to-Text Implementation",
-                  description: "Implemented high-accuracy speech recognition capabilities for teacher assistance applications.",
-                  technologies: ["IBM Watson", "Python", "Speech Recognition", "NLP"]
+                  name: "Real-time Question Prompts",
+                  description: "Implemented system that increased student response rates by 40% and won first place at the "Call for Code" Hackathon.",
+                  technologies: ["Azure Cognitive Services", "Zoom API", "NLP"]
                 }
               ]}
             />
