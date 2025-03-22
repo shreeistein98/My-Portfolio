@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { CheckCircle, Download, GraduationCap, Award, Trophy } from "lucide-react";
@@ -33,7 +34,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 gap-10 items-start"> {/* Changed from items-center to items-start */}
             <div className="order-2 md:order-1">
               <h2 className="text-2xl font-semibold mb-4">Shreyas Gaikwad</h2>
               <p className="text-muted-foreground mb-4">
@@ -81,7 +82,7 @@ const About = () => {
               </a>
             </div>
 
-            <div className="order-1 md:order-2 flex justify-center">
+            <div className="order-1 md:order-2 flex justify-center sticky top-24"> {/* Added sticky positioning */}
               <div className="relative w-64 h-80 sm:w-80 sm:h-96 overflow-hidden rounded-xl border-4 border-white dark:border-gray-800 shadow-xl">
                 <img
                   src="/lovable-uploads/2628dcaf-b870-4733-8ab8-67b73fcabdbc.png"
