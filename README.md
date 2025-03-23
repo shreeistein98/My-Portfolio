@@ -1,69 +1,44 @@
-# Welcome to your Lovable project
+ #  Shreyas Gaikwad – Data Engineer & Analyst 
 
-## Project info
+ *Turning complex data into clear, actionable insights.*
 
-**URL**: https://lovable.dev/projects/c9c35af1-2217-4193-92bb-e65a64f99acf
+**Enthusiastic and Persistent**—these two words define me! I am passionate about problem-solving, whether technical or analytical, and always strive to find effective solutions. The core value of 'Innovation' resonates with me the most because I am driven to develop creative and efficient approaches to tackling data challenges. 
 
-## How can I edit this code?
+I’m a data enthusiast with a passion for building **efficient pipelines**, crafting **intuitive dashboards**, and solving real-world problems using **data science and engineering**. From automating ETL workflows to visualizing trends that drive decisions, I bring **technical precision** and **business value** together.
 
-There are several ways of editing your application.
+🌐 **Live Portfolio Website**  
+🔗 [https://shreyas-gaikwad-portfolio.netlify.app/](https://shreyas-gaikwad-portfolio.netlify.app/)
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c9c35af1-2217-4193-92bb-e65a64f99acf) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📌 Featured Projects
 
-**Use your preferred IDE**
+### 💡 KnowFlow – Offline Multi-Modal AI Assistant  
+An AI platform powered by **Llama 3.2**, capable of performing offline text, image, and data analysis. Supports dataset visualization with 4-bit quantization optimized for devices with as little as 8GB RAM.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🎶 Memory Mind – HackSC 2024 Winner  
+A learning tool for ADHD individuals that converts key text into catchy jingles using NLP and Flask, generating results in under 5 seconds.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 📊 COVID-19 Dashboard  
+Processed a 650,000-row dataset using **Pandas** and **Statsmodels**, improving data accuracy by 30% and visualized key KPIs in **Power BI** with 93% model accuracy.
 
-Follow these steps:
+### 🔐 Cybersecurity Dashboard – Persistent Systems  
+Designed **Tableau** dashboards to reduce anomaly detection time from 2 hours to 10 minutes, preventing 30+ security threats. Automated JIRA workflows and SQL log analysis at scale.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📌 Technical Skills
 
-# Step 3: Install the necessary dependencies.
-npm i
+**Programming and Query Languages:** Python, R, Java, MySQL, PostgreSQL, NoSQL, Spark, JavaScript
+**Business Intelligence Tools:** Tableau, PowerBI, Looker, Apache SuperSet, Data Studio
+**Cloud Services and Technologies:** JIRA, Agile, GCP, AWS, Jenkins, Snowflake, RDS, pgAdmin, Docker, Flask, NodeJS, Databricks
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 📬 Let's Connect
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+ 📧 Email: [shreyasgaikwad.sg98@gmail.com](mailto:shreyasgaikwad.sg98@gmail.com)  
+ 💼 LinkedIn: [linkedin.com/in/shreyas-gaikwad98](https://www.linkedin.com/in/shreyas-gaikwad98)
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c9c35af1-2217-4193-92bb-e65a64f99acf) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Thanks for stopping by! Feel free to explore my work and reach out if you’d like to collaborate or connect.
