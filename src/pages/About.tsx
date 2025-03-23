@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { CheckCircle, Download, GraduationCap, Award, Trophy } from "lucide-react";
@@ -10,12 +9,10 @@ const About = () => {
   }, []);
 
   // Function to handle resume download
-  const handleResumeDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    
-    // Create a link to the PDF file and trigger download
+  const handleResumeDownload = () => {
+    // Create a link to the PDF file in the public folder
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Path to your PDF file in the public folder
+    link.href = '/shreyas-gaikwad-resume.pdf'; 
     link.download = 'shreyas-gaikwad-resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -34,7 +31,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 items-start"> {/* Changed from items-center to items-start */}
+          <div className="grid md:grid-cols-2 gap-10 items-start">
             <div className="order-2 md:order-1">
               <h2 className="text-2xl font-semibold mb-4">Shreyas Gaikwad</h2>
               <p className="text-muted-foreground mb-4">
@@ -72,17 +69,16 @@ const About = () => {
                 <span className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground">Data Analytics</span>
               </div>
 
-              <a
-                href="#"
+              <button
                 onClick={handleResumeDownload}
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg inline-flex items-center gap-2"
               >
                 Download Resume
                 <Download size={16} />
-              </a>
+              </button>
             </div>
 
-            <div className="order-1 md:order-2 flex justify-center sticky top-24"> {/* Added sticky positioning */}
+            <div className="order-1 md:order-2 flex justify-center sticky top-24">
               <div className="relative w-64 h-80 sm:w-80 sm:h-96 overflow-hidden rounded-xl border-4 border-white dark:border-gray-800 shadow-xl">
                 <img
                   src="/lovable-uploads/2628dcaf-b870-4733-8ab8-67b73fcabdbc.png"

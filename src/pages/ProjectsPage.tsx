@@ -1,6 +1,7 @@
 
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
+import { Award } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface ProjectCardProps {
   solution: string;
   technologies: string[];
   image?: string;
+  award?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -18,6 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   solution,
   technologies,
   image,
+  award,
 }) => {
   return (
     <div className="group rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 bg-card h-full flex flex-col">
@@ -31,7 +34,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       )}
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-semibold mb-4">{title}</h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-xl font-semibold">{title}</h3>
+          {award && (
+            <div className="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-md text-sm">
+              <Award size={14} />
+              <span>{award}</span>
+            </div>
+          )}
+        </div>
         
         <div className="space-y-4 mb-6">
           <div>
@@ -92,7 +103,9 @@ const ProjectsPage = () => {
               solution="Built a fun learning plugin using Python, Flask and NLP to extract keywords, create catchy jingles in under 5 seconds, winning HackSC 2024 at the University of Southern California."
               technologies={["Python", "Flask", "NLP", "AI"]}
               image="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              award="HackSC Hackathon Winner"
             />
+            
             <ProjectCard
               title="Anomaly Motion Detection"
               problem="Traditional security systems lack the ability to detect unusual movement patterns in real-time video feeds, creating security vulnerabilities."

@@ -66,7 +66,7 @@ export const Experience: React.FC = () => {
 
         <div className="grid gap-6 md:grid-cols-2">
           <ExperienceItem
-            title="Data Engineer Intern"
+            title="Data Analyst Intern"
             company="Bauhaus Group"
             location="Carson, California"
             period="May 2024 - Present"

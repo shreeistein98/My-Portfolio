@@ -23,32 +23,39 @@ export const Contact: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Using EmailJS to send emails without a backend
-      const response = await fetch("https://formsubmit.co/ajax/shreyasgaikwad.sg98@gmail.com", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        }),
-      });
+      // Using a different approach to send emails
+      const formElement = e.target as HTMLFormElement;
+      const formAction = "https://formsubmit.co/shreyasgaikwad.sg98@gmail.com";
       
-      const data = await response.json();
+      // Create a hidden form to submit directly
+      const hiddenForm = document.createElement("form");
+      hiddenForm.method = "POST";
+      hiddenForm.action = formAction;
+      hiddenForm.target = "_blank";
       
-      if (data.success) {
-        setSubmitted(true);
-        setFormData({ name: "", email: "", message: "" });
-        toast.success("Message sent successfully!");
-        
-        // Reset success message after 5 seconds
-        setTimeout(() => setSubmitted(false), 5000);
-      } else {
-        throw new Error("Failed to send message");
+      // Add form data
+      for (const key in formData) {
+        if (Object.prototype.hasOwnProperty.call(formData, key)) {
+          const input = document.createElement("input");
+          input.type = "hidden";
+          input.name = key;
+          input.value = formData[key as keyof typeof formData];
+          hiddenForm.appendChild(input);
+        }
       }
+      
+      // Add to body, submit, and remove
+      document.body.appendChild(hiddenForm);
+      hiddenForm.submit();
+      document.body.removeChild(hiddenForm);
+      
+      // Reset form and show success
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+      toast.success("Message sent successfully!");
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
       toast.error("Failed to send message. Please try again later.");
       console.error("Error sending message:", error);
