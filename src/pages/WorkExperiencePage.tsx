@@ -108,7 +108,7 @@ const WorkExperiencePage = () => {
 
           <div className="space-y-6">
             <WorkExperienceCard
-              title="Data Engineer Intern"
+              title="Data Analyst Intern"
               company="Bauhaus Group"
               location="Carson, California"
               period="May 2024 - Present"

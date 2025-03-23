@@ -1,23 +1,12 @@
 import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
-import { CheckCircle, Download, GraduationCap, Award, Trophy } from "lucide-react";
+import { CheckCircle, GraduationCap, Award, Trophy } from "lucide-react";
 
 const About = () => {
   // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // Function to handle resume download
-  const handleResumeDownload = () => {
-    // Create a link to the PDF file in the public folder
-    const link = document.createElement('a');
-    link.href = '/shreyas-gaikwad-resume.pdf'; 
-    link.download = 'shreyas-gaikwad-resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div className="animate-fade-in pt-24">
@@ -68,14 +57,6 @@ const About = () => {
                 <span className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground">Cloud Computing</span>
                 <span className="px-3 py-1 text-sm rounded-full bg-secondary text-secondary-foreground">Data Analytics</span>
               </div>
-
-              <button
-                onClick={handleResumeDownload}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg inline-flex items-center gap-2"
-              >
-                Download Resume
-                <Download size={16} />
-              </button>
             </div>
 
             <div className="order-1 md:order-2 flex justify-center sticky top-24">
